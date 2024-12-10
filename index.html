@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/styles.css" />
+  </head>
+  <body>
+    <!-- Use https://picsum.photos to display images -->
+    <header class="header">
+      <div class="container--header">
+        <a href="/" class="header__logo">Travel<span>Blog</span></a>
+        <nav class="nav nav--active">
+          <ul class="nav__list">
+            <li><a href="#articles" class="nav__link">Articles</a></li>
+            <li><a href="#signin" class="nav__link">Sign in</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <article class="container--hero">
+          <h1>
+            Welcome to Travel Blog: <br />
+            Insights, Inspiration, and More!
+          </h1>
+          <div class="divider"></div>
+          <p>
+            Insights, inspiration, and practical advice on a wide range of
+            topics. Whether you're looking for the latest trends, expert tips,
+            or simply a bit of inspiration to brighten your day!
+          </p>
+          <button type="submit" class="button-outline">
+            Scroll to articles
+          </button>
+        </article>
+      </section>
+    </main>
+    <section id="articles" class="news-section">
+      <div class="container--news-content">
+        <div class="news-section_infoContent">
+          <h1 class="news-section__title">Latest articles</h1>
+          <p class="news-section__subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+
+        <ul class="tab-list">
+          <li class="tab active">All</li>
+          <li class="tab">Adventure</li>
+          <li class="tab">Travel</li>
+          <li class="tab">Fashion</li>
+          <li class="tab">Technology</li>
+          <li class="tab">Branding</li>
+        </ul>
+
+        <div id="news-list" class="newsCardList"></div>
+      </div>
+    </section>
+
+    <section id="signin" class="form-container">
+      <h2>Sign in form</h2>
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" placeholder="Your surname" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="example@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="********" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="content">Content</label>
+            <textarea id="content" placeholder="Message"></textarea>
+          </div>
+          <div class="form-group__consent">
+            <div class="form-check">
+              <input type="checkbox" class="checkbox" id="consent-one" />
+              <label for="consent-one">Consent one</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="checkbox"
+                id="consent-two"
+                checked
+              />
+              <label for="consent-two">Consent two (pre checked)</label>
+            </div>
+            <button type="submit" class="button">Submit</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-content__row">
+          <div class="footer-section">
+            <h3>Contact the Publisher</h3>
+            <ul>
+              <li><a href="#">example@email.com</a></li>
+              <li><a href="#">+944 450 904 505</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Job Opportunities</a></li>
+              <li><a href="#">Advertise</a></li>
+              <li><a href="#">Membership</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Headquarter</h3>
+            <p>1999 Middleville,</p>
+            <p>NY 1001, New York</p>
+            <p>USA</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom__container">
+          <p>2024 | Travel Blog</p>
+          <a href="#" class="subscribe">Subscribe Now</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data/index.js"></script>
+  </body>
+</html>

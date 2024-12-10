@@ -1,0 +1,116 @@
+$input-focus: #999;
+
+.form-container {
+  margin: 0 auto;
+  padding: 4rem;
+  background-color: $secondary;
+
+  @include media($mobile) {
+    padding: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #000;
+    font-size: 28px;
+
+    @include media($mobile) {
+      font-size: 20px;
+    }
+  }
+
+  form {
+    max-width: 1000px;
+    margin: auto;
+
+    .form-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+
+      @include media($tablet) {
+        max-width: 100%;
+      }
+
+      @include media($mobile) {
+        flex-direction: column;
+      }
+
+      .form-group {
+        width: 48%;
+
+        @include media($tablet) {
+          width: 100%;
+        }
+
+        @include media($mobile) {
+          width: 100%;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          color: #000;
+          font-size: 14px;
+
+          @include media($mobile) {
+            font-size: 14px;
+          }
+        }
+
+        input,
+        textarea {
+          @extend input;
+          &:focus {
+            border-color: $input-focus;
+            outline: none;
+          }
+        }
+
+        textarea {
+          resize: none;
+          height: 100px;
+        }
+
+        &.full-width {
+          flex: 100%;
+        }
+      }
+
+      .form-group__consent {
+        @extend .form-group;
+        display: flex;
+        flex-direction: column;
+        padding: 6px 0;
+        align-self: flex-end;
+        gap: 20px;
+      }
+    }
+
+    .form-check {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
+
+      input {
+        width: 20px;
+        height: 20px;
+        appearance: none;
+      }
+
+      input:checked {
+        background-color: $primary;
+      }
+
+      label {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

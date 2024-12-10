@@ -1,0 +1,11 @@
+input {
+  border: 1px solid $input-border;
+  border-radius: 1px;
+  min-height: 20px;
+  width: 97.5%;
+  padding: 10px 0px 10px 10px;
+
+  @include media($mobile) {
+    width: 97%;
+  }
+}

@@ -1,0 +1,18 @@
+@import 'settings/reset';
+@import 'settings/mixins';
+@import 'settings/fonts';
+@import 'settings/variables';
+@import 'settings/elements';
+
+// components
+@import 'components/header';
+@import 'components/cardContent';
+@import 'components/tag';
+@import 'components/buttons';
+@import 'components/newsCard';
+@import 'components/signInSection';
+@import 'components/input';
+@import 'components/footer';
+
+// pages
+@import 'pages/homepage';

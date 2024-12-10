@@ -1,0 +1,146 @@
+.hero {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url('/assets/images/hero_bg.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container--hero {
+  @extend .container;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 34px;
+  color: white;
+
+  @include media($mobile) {
+    gap: 12px;
+    min-height: 60vh;
+  }
+
+  h1 {
+    max-width: 580px;
+    font-size: 36px;
+    font-family: 700;
+
+    @include media($tablet) {
+      font-size: 22px;
+    }
+
+    @include media($mobile) {
+      font-size: 22px;
+      max-width: 580px;
+    }
+  }
+
+  p {
+    max-width: 420px;
+    font-size: 14px;
+    font-family: 400;
+
+    @include media($mobile) {
+      font-size: 12px;
+    }
+  }
+
+  .button-outline {
+    @extend .button;
+    outline: 1px solid $primary;
+    background-color: transparent;
+  }
+}
+
+.news-section {
+  padding: 60px 0;
+
+  .container--news-content {
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .news-section_infoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 28px;
+    color: black;
+
+    @include media($mobile) {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: black;
+
+    @include media($mobile) {
+      font-size: 12px;
+    }
+  }
+
+  .tab-list {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 4px;
+    margin-top: 20px;
+    color: #000;
+    overflow: auto;
+
+    @include media($tablet) {
+      justify-content: center;
+    }
+
+    @include media($mobile) {
+      justify-content: center;
+    }
+
+    .tab {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+
+      &:not(.active) {
+        color: #000;
+      }
+
+      @include media($mobile) {
+        font-size: 10px;
+      }
+    }
+
+    .active {
+      color: $primary;
+    }
+  }
+
+  .newsCardList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .news-section__footer {
+    margin-top: 20px;
+  }
+}
